@@ -7,26 +7,29 @@ menuIcon.onclick = () => {
     navbar.classList.toggle('active');
 };
 
-// Scroll active link
+// Scroll sections
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('header nav a');
 
 window.onscroll = () => {
-    const scrollY = window.scrollY;
-
     sections.forEach(sec => {
+        const top = window.scrollY;
         const offset = sec.offsetTop - 150;
         const height = sec.offsetHeight;
         const id = sec.getAttribute('id');
 
-        if (scrollY >= offset && scrollY < offset + height) {
-            navLinks.forEach(link => link.classList.remove('active'));
-            const activeLink = document.querySelector(`header nav a[href*="${id}"]`);
-            if (activeLink) activeLink.classList.add('active');
+        if (top >= offset && top < offset + height) {
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+            });
+            
+            // Animation Trigger
+            sec.classList.add('show-animate');
         }
     });
 
-    // Close navbar when scrolling
+    // Close navbar on scroll
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
 };
