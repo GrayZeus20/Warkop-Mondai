@@ -3,108 +3,255 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Warkop Mondai – Kopi khas Makassar, sarabba rempah, dan snack tradisional autentik di Jl. Somba Opu, Makassar.">
+    <meta name="theme-color" content="#1a1108">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:site_name" content="Warkop Mondai">
+    <meta property="og:title" content="Warkop Mondai – Kopi Khas Makassar">
+    <meta property="og:description" content="Nikmati kopi autentik khas Makassar, sarabba rempah, dan snack tradisional di Jl. Somba Opu, Makassar. Buka setiap hari 08.00 - 00.00 WITA.">
+    <meta property="og:image" content="img/hero-cup.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Warkop Mondai – Kopi Khas Makassar">
+    <meta name="twitter:description" content="Nikmati kopi autentik khas Makassar, sarabba rempah, dan snack tradisional di Jl. Somba Opu, Makassar.">
+    <meta name="twitter:image" content="img/hero-cup.svg">
     <title>Warkop Mondai – Kopi Khas Makassar</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
 
     <!-- Header / Navbar -->
     <header class="header">
-        <a href="#" class="logo">Warkop <span>Mondai</span></a>
-        <nav class="navbar">
+        <a href="#home" class="logo">Warkop <span>Mondai</span></a>
+        <nav class="navbar" id="primary-nav" aria-label="Navigasi utama">
             <a href="#home" class="active">Home</a>
             <a href="#menu">Menu</a>
             <a href="#lokasi">Lokasi</a>
+            <a href="#testimoni">Testimoni</a>
             <a href="#kontak">Kontak</a>
         </nav>
-        <i class='bx bx-menu' id="menu-icon"></i>
+        <button type="button" class="menu-toggle" id="menu-icon" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="primary-nav">
+            <i class="bx bx-menu" aria-hidden="true"></i>
+        </button>
     </header>
 
-    <!-- Home Section -->
-    <section class="home" id="home">
-        <div class="home-content animate">
-            <h1>Warkop Mondai</h1>
-            <p class="tagline">Kopi Khas Makassar</p>
-            <p class="desc">
-                Nikmati aroma kopi autentik khas Makassar dengan suasana santai dan nyaman. 
-                Tempat terbaik untuk berkumpul, bercerita, dan menikmati hari.
-            </p>
-            <div class="tech">
-                <span>Kopi Arabika</span>
-                <span>Kopi Robusta</span>
-                <span>Snack Tradisional</span>
-            </div>
-            <a href="#menu" class="btn">Lihat Menu <i class='bx bx-right-arrow-alt'></i></a>
-        </div>
-        <div class="home-img animate">
-            <img src="img/hero-cup.svg" alt="Coffee Cup">
-        </div>
-    </section>
-
-    <!-- Menu Section -->
-    <section class="menu" id="menu">
-        <h2 class="heading">Menu <span>Andalan</span></h2>
-        <div class="menu-container">
-            <div class="menu-box animate">
-                <i class='bx bx-coffee'></i>
-                <h3>Kopi Susu Mondai</h3>
-                <p>Kopi khas Makassar dengan campuran susu kental manis yang pas.</p>
-                <span class="price">Rp 15.000</span>
-            </div>
-            <div class="menu-box animate">
-                <i class='bx bx-leaf'></i>
-                <h3>Kopi Hitam Original</h3>
-                <p>Kopi hitam murni dengan aroma kuat yang membangkitkan semangat.</p>
-                <span class="price">Rp 10.000</span>
-            </div>
-            <div class="menu-box animate">
-                <i class='bx bx-cake'></i>
-                <h3>Pisang Goreng Madu</h3>
-                <p>Pisang goreng renyah dengan topping madu alami.</p>
-                <span class="price">Rp 12.000</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Lokasi Section -->
-    <section class="lokasi" id="lokasi">
-        <h2 class="heading">Lokasi <span>Kami</span></h2>
-        <div class="lokasi-content">
-            <div class="lokasi-info animate">
-                <div class="info-item">
-                    <i class='bx bx-map'></i>
-                    <p>Jl. Somba Opu, Makassar, Sulawesi Selatan</p>
+    <main>
+        <!-- Home Section -->
+        <section class="home show-animate" id="home">
+            <div class="home-content animate">
+                <h1>Warkop Mondai</h1>
+                <p class="tagline">Kopi Khas Makassar</p>
+                <p class="desc">
+                    Nikmati aroma kopi autentik khas Makassar dengan suasana santai dan nyaman.
+                    Tempat terbaik untuk berkumpul, bercerita, dan menikmati hari bersama teman maupun keluarga.
+                </p>
+                <div class="tech">
+                    <span>Kopi Arabika</span>
+                    <span>Kopi Robusta</span>
+                    <span>Snack Tradisional</span>
+                    <span>Sarabba Rempah</span>
                 </div>
-                <div class="info-item">
-                    <i class='bx bx-time-five'></i>
-                    <p>Senin - Minggu: 10.00 - 23.00 WITA</p>
+                <a href="#menu" class="btn">Lihat Menu <i class="bx bx-right-arrow-alt" aria-hidden="true"></i></a>
+            </div>
+            <div class="home-img animate">
+                <img src="img/hero-cup.svg" alt="Ilustrasi cangkir kopi hangat Warkop Mondai" width="400" height="400">
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section class="menu" id="menu">
+            <h2 class="heading">Menu <span>Andalan</span></h2>
+
+            <!-- Category Filter -->
+            <div class="menu-filter animate" role="group" aria-label="Filter kategori menu">
+                <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">Semua</button>
+                <button type="button" class="filter-btn" data-filter="kopi" aria-pressed="false">Kopi &amp; Minuman</button>
+                <button type="button" class="filter-btn" data-filter="snack" aria-pressed="false">Snack Tradisional</button>
+            </div>
+
+            <div class="menu-container">
+                <!-- Item 1 -->
+                <article class="menu-box animate" data-category="kopi">
+                    <i class="bx bx-coffee" aria-hidden="true"></i>
+                    <h3>Kopi Susu Mondai</h3>
+                    <p>Kopi khas Makassar dengan campuran susu kental manis yang gurih dan pas.</p>
+                    <div class="box-footer">
+                        <span class="price">Rp 15.000</span>
+                        <a href="https://wa.me/628123456789?text=Halo%20Warkop%20Mondai%2C%20saya%20ingin%20memesan%20Kopi%20Susu%20Mondai%20(Rp%2015.000)." target="_blank" rel="noopener noreferrer" class="btn-menu">
+                            Pesan <i class="bx bxl-whatsapp" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </article>
+                <!-- Item 2 -->
+                <article class="menu-box animate" data-category="kopi">
+                    <i class="bx bx-leaf" aria-hidden="true"></i>
+                    <h3>Kopi Hitam Original</h3>
+                    <p>Kopi hitam murni berkualitas dengan aroma kuat khas tanah Sulawesi.</p>
+                    <div class="box-footer">
+                        <span class="price">Rp 10.000</span>
+                        <a href="https://wa.me/628123456789?text=Halo%20Warkop%20Mondai%2C%20saya%20ingin%20memesan%20Kopi%20Hitam%20Original%20(Rp%2010.000)." target="_blank" rel="noopener noreferrer" class="btn-menu">
+                            Pesan <i class="bx bxl-whatsapp" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </article>
+                <!-- Item 3 -->
+                <article class="menu-box animate" data-category="kopi">
+                    <i class="bx bx-drink" aria-hidden="true"></i>
+                    <h3>Sarabba Mondai</h3>
+                    <p>Minuman jahe hangat khas Makassar berpadu susu dan rempah rahasia.</p>
+                    <div class="box-footer">
+                        <span class="price">Rp 18.000</span>
+                        <a href="https://wa.me/628123456789?text=Halo%20Warkop%20Mondai%2C%20saya%20ingin%20memesan%20Sarabba%20Mondai%20(Rp%2018.000)." target="_blank" rel="noopener noreferrer" class="btn-menu">
+                            Pesan <i class="bx bxl-whatsapp" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </article>
+                <!-- Item 4 -->
+                <article class="menu-box animate" data-category="snack">
+                    <i class="bx bx-cake" aria-hidden="true"></i>
+                    <h3>Pisang Goreng Madu</h3>
+                    <p>Pisang goreng renyah yang dilumuri dengan topping madu asli yang manis alami.</p>
+                    <div class="box-footer">
+                        <span class="price">Rp 12.000</span>
+                        <a href="https://wa.me/628123456789?text=Halo%20Warkop%20Mondai%2C%20saya%20ingin%20memesan%20Pisang%20Goreng%20Madu%20(Rp%2012.000)." target="_blank" rel="noopener noreferrer" class="btn-menu">
+                            Pesan <i class="bx bxl-whatsapp" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </article>
+                <!-- Item 5 -->
+                <article class="menu-box animate" data-category="snack">
+                    <i class="bx bx-dish" aria-hidden="true"></i>
+                    <h3>Sanggara Peppe</h3>
+                    <p>Pisang muda geprek digoreng garing disajikan bersama sambal terasi khas.</p>
+                    <div class="box-footer">
+                        <span class="price">Rp 14.000</span>
+                        <a href="https://wa.me/628123456789?text=Halo%20Warkop%20Mondai%2C%20saya%20ingin%20memesan%20Sanggara%20Peppe%20(Rp%2014.000)." target="_blank" rel="noopener noreferrer" class="btn-menu">
+                            Pesan <i class="bx bxl-whatsapp" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </article>
+                <!-- Item 6 -->
+                <article class="menu-box animate" data-category="snack">
+                    <i class="bx bx-cookie" aria-hidden="true"></i>
+                    <h3>Jalangkote Garing</h3>
+                    <p>Pastel khas Makassar dengan isi sayur gurih, disajikan dengan saus pedas manis.</p>
+                    <div class="box-footer">
+                        <span class="price">Rp 12.000</span>
+                        <a href="https://wa.me/628123456789?text=Halo%20Warkop%20Mondai%2C%20saya%20ingin%20memesan%20Jalangkote%20Garing%20(Rp%2012.000)." target="_blank" rel="noopener noreferrer" class="btn-menu">
+                            Pesan <i class="bx bxl-whatsapp" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Lokasi Section -->
+        <section class="lokasi" id="lokasi">
+            <h2 class="heading">Lokasi <span>Kami</span></h2>
+            <div class="lokasi-content">
+                <div class="lokasi-info animate">
+                    <div class="info-item">
+                        <i class="bx bx-map" aria-hidden="true"></i>
+                        <p>Jl. Somba Opu, Makassar, Sulawesi Selatan</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="bx bx-time-five" aria-hidden="true"></i>
+                        <div class="info-text">
+                            <p>Senin - Minggu: 08.00 - 00.00 WITA</p>
+                            <span class="open-status" id="open-status" aria-live="polite">
+                                <span class="status-dot" aria-hidden="true"></span>
+                                <span class="status-text">Memeriksa jam buka...</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="bx bx-phone-call" aria-hidden="true"></i>
+                        <p><a href="tel:+628123456789">+62&nbsp;812&#8209;3456&#8209;789</a></p>
+                    </div>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Jl.+Somba+Opu,+Makassar,+Sulawesi+Selatan" target="_blank" rel="noopener noreferrer" class="btn-maps">
+                        Buka di Google Maps <i class="bx bx-map-alt" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="map-container animate">
+                    <!-- Google Maps Embed Interactive -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3973.7547515053153!2d119.40428357410065!3d-5.143048994834241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbf033190df0e73%3A0x7d97b372f8872bcf!2sJl.%20Somba%20Opu%2C%20Makassar%2C%20Sulawesi%20Selatan!5e0!3m2!1sid!2sid!4v1700000000000" title="Peta Lokasi Warkop Mondai di Jl. Somba Opu, Makassar" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
-            <div class="map-placeholder animate">
-                <!-- Google Maps Embed could go here -->
-                <div class="map-overlay">
-                    <i class='bx bx-map-alt'></i>
-                    <p>Peta Lokasi Warkop Mondai</p>
-                </div>
+        </section>
+
+        <!-- Testimoni Section -->
+        <section class="testimoni" id="testimoni">
+            <h2 class="heading">Apa Kata <span>Pelanggan</span></h2>
+            <div class="testimoni-container">
+                <!-- Review 1 -->
+                <article class="testimoni-box animate">
+                    <div class="stars" role="img" aria-label="Rating 5 dari 5 bintang">
+                        <i class="bx bxs-star" aria-hidden="true"></i>
+                        <i class="bx bxs-star" aria-hidden="true"></i>
+                        <i class="bx bxs-star" aria-hidden="true"></i>
+                        <i class="bx bxs-star" aria-hidden="true"></i>
+                        <i class="bx bxs-star" aria-hidden="true"></i>
+                    </div>
+                    <p class="review">"Kopi susu Mondai rasanya mantap sekali! Kopinya terasa kuat, manisnya pas, dan pisang goreng madunya juara. Tempat langganan nongkrong sepulang kerja."</p>
+                    <div class="user-info">
+                        <h3>Andi Pratama</h3>
+                        <span>Pecinta Kopi Makassar</span>
+                    </div>
+                </article>
+                <!-- Review 2 -->
+                <article class="testimoni-box animate">
+                    <div class="stars" role="img" aria-label="Rating 5 dari 5 bintang">
+                        <i class="bx bxs-star" aria-hidden="true"></i>
+                        <i class="bx bxs-star" aria-hidden="true"></i>
+                        <i class="bx bxs-star" aria-hidden="true"></i>
+                        <i class="bx bxs-star" aria-hidden="true"></i>
+                        <i class="bx bxs-star" aria-hidden="true"></i>
+                    </div>
+                    <p class="review">"Suasana di Warkop Mondai sangat santai dan nyaman. Sangat direkomendasikan untuk kumpul keluarga atau kerja remote karena kopinya otentik banget."</p>
+                    <div class="user-info">
+                        <h3>Siti Rahma</h3>
+                        <span>Wiraswasta</span>
+                    </div>
+                </article>
+                <!-- Review 3 -->
+                <article class="testimoni-box animate">
+                    <div class="stars" role="img" aria-label="Rating 4,5 dari 5 bintang">
+                        <i class="bx bxs-star" aria-hidden="true"></i>
+                        <i class="bx bxs-star" aria-hidden="true"></i>
+                        <i class="bx bxs-star" aria-hidden="true"></i>
+                        <i class="bx bxs-star" aria-hidden="true"></i>
+                        <i class="bx bxs-star-half" aria-hidden="true"></i>
+                    </div>
+                    <p class="review">"Suka sekali dengan Sarabba-nya, rempahnya hangat terasa sampai ke tenggorokan. Ditambah Sanggara Peppe sambalnya juara, pedas dan gurih!"</p>
+                    <div class="user-info">
+                        <h3>Faisal Daeng</h3>
+                        <span>Karyawan Swasta</span>
+                    </div>
+                </article>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Kontak Section -->
-    <section class="kontak" id="kontak">
-        <h2 class="heading">Hubungi <span>Kami</span></h2>
-        <div class="kontak-container animate">
-            <p>Ada pertanyaan atau ingin reservasi tempat?</p>
-            <a href="https://wa.me/628123456789" class="btn" target="_blank">
-                Kirim Pesan WhatsApp <i class='bx bxl-whatsapp'></i>
-            </a>
-        </div>
-    </section>
+        <!-- Kontak Section -->
+        <section class="kontak" id="kontak">
+            <h2 class="heading">Hubungi <span>Kami</span></h2>
+            <div class="kontak-container animate">
+                <p>Ada pertanyaan atau ingin reservasi tempat untuk kumpul?</p>
+                <p class="sub-contact">Klik tombol di bawah untuk langsung terhubung ke WhatsApp kami.</p>
+                <a href="https://wa.me/628123456789" class="btn" target="_blank" rel="noopener noreferrer">
+                    Hubungi via WhatsApp <i class="bx bxl-whatsapp" aria-hidden="true"></i>
+                </a>
+            </div>
+        </section>
+    </main>
 
+    <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2026 Warkop Mondai. All rights reserved.</p>
+        <p>&copy; 2026 Warkop Mondai. All rights reserved. Made by Dandi January.</p>
     </footer>
 
     <script src="js/main.js"></script>

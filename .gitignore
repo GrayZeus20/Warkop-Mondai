@@ -1,2 +1,22 @@
+# OS Artifacts
 .DS_Store
 Thumbs.db
+Desktop.ini
+
+# Editor & IDE
+.zed/
+.vscode/
+.idea/
+
+# Logs & Temp
+*.log
+*.tmp
+*.bak
+
+# Environment & Secrets
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
